@@ -1,0 +1,30 @@
+<!-- Default home page -->
+
+<link href='styles/main.css' rel='stylesheet'/>
+<!--[if IE 7]>
+<link href='styles/ie7.css' rel='stylesheet'/>
+<![endif]-->
+
+<div class="top-bar">
+
+</div>
+
+<div class="container clearfix">
+    <div class="main">
+        <h1 id="main-title">Hi <%= user.name %>,</h1>
+        <p>You've successfully logged in.</p>
+        <a class="btn" href="/logout">Logout</a>
+
+        <h2>User Model</h2>
+        <table class="table">
+            <% for(key in user.toJSON() ) { %>
+            <tr>
+                <td><%= key %>: </td>
+                <td class="boxy"><%= user[key] %></td>
+            </tr>
+            <% } %>
+        </table>
+
+      
+    </div>
+</div>
